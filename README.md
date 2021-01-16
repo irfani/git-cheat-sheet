@@ -129,6 +129,13 @@ git reset --hard HEAD~<n>
 git rebase --interactive --autosquash HEAD~N
 ```
 
+#### Squash 3 last commits
+```shell
+git reset --soft HEAD~2 # notice this is 2, not 3
+git commit --amend
+git push --force origin HEAD
+```
+
 #### search git log commits
 ```shell
 git log -S “free text”
