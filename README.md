@@ -136,6 +136,12 @@ git commit --amend
 git push --force origin HEAD
 ```
 
+#### Combine all commits into one
+```shell
+git reset $(git commit-tree HEAD^{tree} -m "A new start")
+git push --force origin HEAD
+```
+
 #### search git log commits
 ```shell
 git log -S “free text”
